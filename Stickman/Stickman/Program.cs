@@ -22,6 +22,8 @@ namespace Stickman
                 if (stamina == 0) 
                 { 
                     stickman1.TakeAction(Stickman.Action.Exhaust);
+                    Console.WriteLine();
+                    Console.WriteLine("         GAME OVER :( ");
                 }
                 if (Console.KeyAvailable)
                 {
@@ -41,10 +43,11 @@ namespace Stickman
                             timefactor = 2.5;
                             break;
                         case ConsoleKey.Spacebar:
-                            stickman1.TakeAction(Stickman.Action.Chill);
+                            stickman1.TakeAction(Stickman.Action.Init);
                             timefactor = 1.0;
                             Stickman.space = " ";
                             Stickman.stamina = 20;
+                            stickman1.TakeAction(Stickman.Action.Chill);
                             break;
                     }
                 }

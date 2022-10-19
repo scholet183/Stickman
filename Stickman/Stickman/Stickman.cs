@@ -20,14 +20,16 @@ namespace Stickman
             this.name = name;
         }
         public enum State
-        {
+        {   
+            Init,
             Chilling,
             Walking,
             Running,
             Exhausted
         }
         public enum Action
-        {
+        {   
+            Init,
             Chill,
             Walk,
             Run,
@@ -50,7 +52,8 @@ namespace Stickman
                 (State.Running, Action.Walk) => State.Walking,
                 (State.Running, Action.Chill) => State.Chilling,
                 (State.Running, Action.Exhaust) => State.Exhausted,
-                (State.Exhausted, Action.Chill) => State.Chilling,
+                (State.Exhausted, Action.Init) => State.Init,
+                (State.Init, Action.Chill) => State.Chilling,
                 _ => state
             };
         }
@@ -62,8 +65,6 @@ namespace Stickman
             {
                 n += "#";
             }
-
-            String Stamina_display = "[" + n + m.Substring(stamina) + "]";
             String legs;
             String body;
             Console.WriteLine();
@@ -105,6 +106,7 @@ namespace Stickman
                     break;
             }
             
+            String Stamina_display = "[" + n + m.Substring(stamina) + "]";
             Console.WriteLine("Stamina: " + Stamina_display);
             Console.WriteLine("Distance " + space.Length);
             return stamina;
