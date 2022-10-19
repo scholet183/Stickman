@@ -7,6 +7,7 @@ namespace Stickman
     internal class Stickman
     {
         public String name = "";
+        public static int stamina = 20;
         public static String space = " ";
         public static String head = "  0";
         public static String body1 = " !T!";
@@ -54,7 +55,15 @@ namespace Stickman
             };
         }
         public static int handling(int counter,State x)
-        {
+        {   
+            String n = "";
+            String m = "                    ";
+            for(int i = 0; i < stamina; i++)
+            {
+                n += "#";
+            }
+
+            String Stamina_display = "[" + n + m.Substring(stamina) + "]";
             String legs;
             String body;
             Console.WriteLine();
@@ -66,6 +75,7 @@ namespace Stickman
                     Console.WriteLine(space + head);
                     Console.WriteLine(space + body1);
                     Console.WriteLine(space + legs1);
+                    if(stamina < 20) { stamina++;}
                     break;
                 case State.Walking:
                     if (counter % 2 == 0) { legs = legs1; }
@@ -75,6 +85,7 @@ namespace Stickman
                     Console.WriteLine(space + body1);
                     Console.WriteLine(space + legs);
                     space += " ";
+                    if(stamina > 0) { stamina--; }
                     break;
                 case State.Running:
                     if (counter % 2 == 0) { legs = legs1; body = body2; }
@@ -84,6 +95,7 @@ namespace Stickman
                     Console.WriteLine(space + body);
                     Console.WriteLine(space + legs);
                     space += " ";
+                    if(stamina > 0) { stamina-=2; }
                     break;
                 case State.Exhausted:
                     Console.WriteLine();
@@ -92,7 +104,10 @@ namespace Stickman
                     Console.WriteLine(space + ">--o");
                     break;
             }
-            return space.Length;
+            
+            Console.WriteLine("Stamina: " + Stamina_display);
+            Console.WriteLine("Distance " + space.Length);
+            return stamina;
         }
     }
 }

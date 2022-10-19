@@ -9,8 +9,8 @@ namespace Stickman
         {
             var stickman1 = new Stickman("Harry");
             int counter = 0;
-            int timefactor = 1;
-            int distance;
+            double timefactor = 1.0;
+            int stamina;
             String msg = " C - Chill\n W - Walk \n R - Run \n Spacebar - Reset\n\n Press Enter to Start";
             Console.TreatControlCAsInput = true;
             Console.WriteLine(msg);
@@ -18,8 +18,8 @@ namespace Stickman
             while (true)
             {
                 Console.Clear();
-                distance = Stickman.handling(counter, stickman1.CurrentState);
-                if (distance >= 30) 
+                stamina = Stickman.handling(counter, stickman1.CurrentState);
+                if (stamina == 0) 
                 { 
                     stickman1.TakeAction(Stickman.Action.Exhaust);
                 }
@@ -30,26 +30,26 @@ namespace Stickman
                     {
                         case ConsoleKey.C:
                             stickman1.TakeAction(Stickman.Action.Chill);
-                            timefactor = 1;
+                            timefactor = 1.0;
                             break;
                         case ConsoleKey.W:
                             stickman1.TakeAction(Stickman.Action.Walk);
-                            timefactor = 1;
+                            timefactor = 1.0;
                             break;
                         case ConsoleKey.R:
                             stickman1.TakeAction(Stickman.Action.Run);
-                            timefactor = 2;
+                            timefactor = 2.5;
                             break;
                         case ConsoleKey.Spacebar:
                             stickman1.TakeAction(Stickman.Action.Chill);
-                            timefactor = 1;
+                            timefactor = 1.0;
                             Stickman.space = " ";
+                            Stickman.stamina = 20;
                             break;
                     }
                 }
                 counter++;
-                Console.WriteLine("Distance traveled: " + distance);
-                Thread.Sleep(1000/timefactor);
+                Thread.Sleep(Convert.ToInt16(1000/timefactor));
             }
         }
     }
