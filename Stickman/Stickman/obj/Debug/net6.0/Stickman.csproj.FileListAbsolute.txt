@@ -1,0 +1,15 @@
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\Stickman.csproj.AssemblyReference.cache
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\Stickman.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\Stickman.AssemblyInfoInputs.cache
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\Stickman.AssemblyInfo.cs
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\Stickman.csproj.CoreCompileInputs.cache
+C:\Projekte\VisualStudio\Stickman\Stickman\bin\Debug\net6.0\Stickman.exe
+C:\Projekte\VisualStudio\Stickman\Stickman\bin\Debug\net6.0\Stickman.deps.json
+C:\Projekte\VisualStudio\Stickman\Stickman\bin\Debug\net6.0\Stickman.runtimeconfig.json
+C:\Projekte\VisualStudio\Stickman\Stickman\bin\Debug\net6.0\Stickman.dll
+C:\Projekte\VisualStudio\Stickman\Stickman\bin\Debug\net6.0\Stickman.pdb
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\Stickman.dll
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\refint\Stickman.dll
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\Stickman.pdb
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\Stickman.genruntimeconfig.cache
+C:\Projekte\VisualStudio\Stickman\Stickman\obj\Debug\net6.0\ref\Stickman.dll
