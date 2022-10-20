@@ -96,7 +96,8 @@ namespace Stickman
                     Console.WriteLine(space + body);
                     Console.WriteLine(space + legs);
                     space += " ";
-                    if(stamina > 0) { stamina-=2; }
+                    if(stamina > 1) { stamina-=2; }
+                    else if(stamina == 1) { stamina = 0; }
                     break;
                 case State.Exhausted:
                     Console.WriteLine();
