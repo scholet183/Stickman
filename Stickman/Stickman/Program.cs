@@ -12,7 +12,6 @@ namespace Stickman
             double timefactor = 1.0;
             int stamina;
             String msg = " C - Chill\n W - Walk \n R - Run \n Spacebar - Reset\n\n Press Enter to Start";
-            Console.TreatControlCAsInput = true;
             Console.WriteLine(msg);
             Console.ReadKey();
             while (true)

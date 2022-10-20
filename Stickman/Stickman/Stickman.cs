@@ -57,18 +57,14 @@ namespace Stickman
                 _ => state
             };
         }
-        public static int handling(int counter,State x)
+        public static int handling(int counter,State currentState)
         {   
             String n = "";
             String m = "                    ";
-            for(int i = 0; i < stamina; i++)
-            {
-                n += "#";
-            }
             String legs;
             String body;
             Console.WriteLine();
-            switch (x)
+            switch (currentState)
             {
                 case State.Chilling:
                     if (counter % 2 == 0) { Console.WriteLine(space + "    zZ"); }
@@ -95,7 +91,7 @@ namespace Stickman
                     Console.WriteLine(space + head);
                     Console.WriteLine(space + body);
                     Console.WriteLine(space + legs);
-                    space += " ";
+                    space += "  ";
                     if(stamina > 1) { stamina-=2; }
                     else if(stamina == 1) { stamina = 0; }
                     break;
@@ -107,6 +103,10 @@ namespace Stickman
                     break;
             }
             
+            for(int i = 0; i < stamina; i++)
+            {
+                n += "#";
+            }
             String Stamina_display = "[" + n + m.Substring(stamina) + "]";
             Console.WriteLine("Stamina: " + Stamina_display);
             Console.WriteLine("Distance " + space.Length);
